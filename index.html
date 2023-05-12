@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;600;700&family=Nunito+Sans:wght@200&family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    :root{
+      
+        --Cyan: hsl(179, 62%, 43%);
+        --Bright-Yellow: hsl(71, 73%, 54%);
+        --color: hsl(228, 45%, 44%);
+        
+        --Light-Gray: hsl(204, 43%, 93%);
+        --Grayish-Blue: hsl(218, 22%, 67%);
+
+        --font-family: "Karla";
+        --Weights: 400, 700;
+
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: var(--font-family);
+    }
+    .container{
+      width: 100%;
+      height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: honeydew;
+    }
+    .cards{
+   
+      width: 750px;
+      height: 500px;
+      box-shadow: 0px 0px 10px #8d8b8b;
+      border-radius: 9px;
+    }
+    .card-top{
+      background-color: white;
+      width: 100%;
+      height: 50%;
+      line-height: 20px;
+      padding: 40px 30px;
+      padding-bottom: 10px;
+      border-radius: 10px 10px 0 0 ;
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+
+    }
+    .card-top h1{
+      color: var(--Cyan);
+      font-weight: 700;
+    }
+
+    .card-top div{
+      font-weight: 400;
+      margin-top: 20px;
+      color: var(--Grayish-Blue);
+    }
+    .card-top div:last-child{
+      margin-top: 30px;
+    }
+    .card-top h2{
+      color: var(--Bright-Yellow);
+      font-weight: 400;
+    }
+
+    .cad-division{
+      width: 100%;
+   
+      color: white;
+      border-radius: 0 0 10px 10px ;
+      display: flex;
+      background-color: var(--Grayish-Blue);
+    }
+    .left{
+
+      width: 50%;
+      line-height: 35px;
+      height: 100%;
+      padding: 35px 45px;
+      background-color:  var(--Cyan);
+      border-radius: 0 0 0 10px ;
+    }
+    .left span{
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .left div button{
+
+     margin-top: 20px;
+     padding: 15px 100px;
+     border: none;
+     border-radius: 4px;
+     color: white;
+     background-color: var(--Bright-Yellow);
+     box-shadow: 0px 0px 8px #8d8b8b;
+     font-weight: 700;
+     font-size: 24px;
+    }
+    .right{
+      width: 50%;
+      line-height: 35px;
+      height: 100%;
+      padding: 35px 45px;
+      background-color: hsl(179, 69%, 45%);
+      padding-bottom: 10px;
+      border-radius: 0 0 12px 0 ;
+
+    }
+    footer{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    @media (min-width:120px) and (max-width:705px) {
+      .container{
+        width: 100%;
+        
+      }
+       .left h2{
+        margin:15px;
+       }
+      .left div button{
+        margin-top: 34px;
+
+}
+      .cards{
+        height: 80vh;
+      }
+      .card-top{
+      background-color: white;
+      width: 100%;
+      height: 50%;
+      line-height: 20px;
+      padding: 40px ;
+      border-radius: 10px 10px 0 0 ;
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+
+    }
+      .cad-division{
+      width: 100%;
+      height: 100%;
+      color: white;
+      border-radius: 0 0 10px 10px ;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      background-color: var(--Grayish-Blue);
+      
+    }
+    .left{
+display:flex;
+flex-direction: column;
+width: 100%;
+line-height: 35px;
+height: 100%;
+padding: 35px 45px;
+background-color:  var(--Cyan);
+border-radius: 0 0 0 10px ;
+position: relative;
+}
+.right{
+      width: 100%;
+      line-height: 30px;
+      height: 100%;
+      padding: 35px 45px;
+      background-color: hsl(179, 69%, 45%);
+      padding-bottom: 10px;
+      border-radius: 0 0 12px 0 ;
+
+    }
+    section{
+      position: relative;
+    }
+footer{
+  position: relative;
+  bottom:0;
+}
+footer p{
+  position: absolute;
+  bottom:-200px;
+  text-align: center;
+}
+    }
+
+  </style>
+</head>
+<body>
+
+<section class="container">
+  <div class="cards">
+    <div class="card-top">
+     <div> <h1>  Join our community</h1></div>
+   
+     <div><h2>30-day, hassle-free money back guarantee</h2></div>
+   <div>
+    <p> Gain access to our full library of tutorials along with expert code reviews. 
+     Perfect for any developers who are serious about honing their skills.</p></div>
+   </div>
+   
+   <div class="cad-division">
+     <div class="left">
+        <h2> Monthly Subscription</h2>
+       <div> <p><span>&dollar;29 </span> per month</p>
+
+        <p>Full access for less than &dollar;1 a day</p> 
+  </div>
+        <div> <button> Sign Up</button></div>
+     </div>
+   
+    <div class="right">
+     <h2> Why Us</h2>
+    <div> <p>
+      Tutorials by industry experts
+      Peer &amp; expert code review
+      Coding exercises
+      Access to our GitHub repos
+      Community forum
+      Flashcard decks
+      New videos every week</p></div>
+     </div>
+   </div>
+      </div>
+  
+</section>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">FernandoVunge</a>.
+    </p>
+  </footer>
+</body>
+</html>
